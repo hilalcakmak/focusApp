@@ -1,0 +1,20 @@
+﻿@model List<User>
+<table>
+    <tr>
+        <th>Kullanıcı Adı</th>
+        <th>Email</th>
+        <th>İşlem</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Username</td>
+            <td>@item.Email</td>
+            <td>
+                <a href="/Users/Edit/@item.UserId">Düzenle</a>
+                <a href="/Users/Delete/@item.UserId">Sil</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Users/Create">Yeni Kullanıcı</a>

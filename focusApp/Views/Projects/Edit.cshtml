@@ -1,0 +1,11 @@
+﻿@model Project
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ProjectId" />
+    <label>Proje Adı:</label>
+    <input asp-for="Name" /><br />
+    <label>Renk:</label>
+    <input asp-for="Color" /><br />
+    <label>Kullanıcı ID:</label>
+    <input asp-for="UserId" /><br />
+    <button type="submit">Kaydet</button>
+</form>

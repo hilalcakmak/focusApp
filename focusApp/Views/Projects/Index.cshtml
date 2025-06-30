@@ -1,0 +1,20 @@
+﻿@model List<Project>
+<table>
+    <tr>
+        <th>Proje Adı</th>
+        <th>Renk</th>
+        <th>İşlem</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td><span style="background:@item.Color">@item.Color</span></td>
+            <td>
+                <a href="/Projects/Edit/@item.ProjectId">Düzenle</a>
+                <a href="/Projects/Delete/@item.ProjectId">Sil</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Projects/Create">Yeni Proje</a>

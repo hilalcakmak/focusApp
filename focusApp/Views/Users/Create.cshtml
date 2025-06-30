@@ -1,0 +1,10 @@
+﻿@model User
+<form asp-action="Create" method="post">
+    <label>Kullanıcı Adı:</label>
+    <input asp-for="Username" /><br />
+    <label>Email:</label>
+    <input asp-for="Email" /><br />
+    <label>Şifre:</label>
+    <input asp-for="PasswordHash" /><br />
+    <button type="submit">Ekle</button>
+</form>
