@@ -18,6 +18,7 @@ namespace focusApp.Controllers
             var tasks = DP.Listeleme<FocusTask>("TaskList").ToList();
             return View(tasks);
         }
+
         [HttpGet]
         public IActionResult Create()
         {
@@ -36,15 +37,16 @@ namespace focusApp.Controllers
             param.Add("@EstimatedMins", task.EstimatedMins);
             param.Add("@DueDate", task.DueDate);
 
-            DP.ExecuteReturn("sp_TaskAdd", param);
+            DP.ExecuteReturn("TaskAdd", param);
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public IActionResult Edit(int id)
         {
             var param = new DynamicParameters();
             param.Add("@TaskId", id);
-            var task = DP.Listeleme<FocusTask>("sp_TaskGetById", param).FirstOrDefault();
+            var task = DP.Listeleme<FocusTask>("TaskGetById", param).FirstOrDefault();
             return View(task);
         }
 
@@ -62,14 +64,15 @@ namespace focusApp.Controllers
             param.Add("@DueDate", task.DueDate);
             param.Add("@IsCompleted", task.IsCompleted);
 
-            DP.ExecuteReturn("sp_TaskUpdate", param);
+            DP.ExecuteReturn("TaskUpdate", param);
             return RedirectToAction("Index");
         }
+
         public IActionResult Delete(int id)
         {
             var param = new DynamicParameters();
             param.Add("@TaskId", id);
-            DP.ExecuteReturn("sp_TaskDelete", param);
+            DP.ExecuteReturn("TaskDelete", param);
             return RedirectToAction("Index");
         }
 

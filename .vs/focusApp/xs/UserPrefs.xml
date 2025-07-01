@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{76742970-45D9-4DF2-8516-ED6BDA92509B}|https">
+  <MonoDevelop.Ide.ItemProperties.focusApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="focusApp/Views/Tasks/Index.cshtml">
+    <Files>
+      <File FileName="focusApp/Models/TaskTags.cs" />
+      <File FileName="focusApp/Models/PomodoroSessions.cs" />
+      <File FileName="focusApp/Models/Reminders.cs" />
+      <File FileName="focusApp/Models/DP.cs" />
+      <File FileName="focusApp/Controllers/UsersController.cs" />
+      <File FileName="focusApp/Views/Users/Index.cshtml" />
+      <File FileName="focusApp/Views/Users/Create.cshtml" />
+      <File FileName="focusApp/Views/Users/Edit.cshtml" />
+      <File FileName="focusApp/Controllers/ProjectsController.cs" />
+      <File FileName="focusApp/Views/Projects/Index.cshtml" />
+      <File FileName="focusApp/Views/Projects/Create.cshtml" />
+      <File FileName="focusApp/Views/Projects/Edit.cshtml" />
+      <File FileName="focusApp/Controllers/TasksController.cs" />
+      <File FileName="focusApp/Controllers/HomeController.cs" />
+      <File FileName="focusApp/Models/Tasks.cs" />
+      <File FileName="focusApp/Models/Projects.cs" />
+      <File FileName="focusApp/Views/Tasks/Index.cshtml" Line="25" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="focusApp">
+            <Node name="focusApp" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Tasks" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

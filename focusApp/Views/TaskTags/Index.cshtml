@@ -1,0 +1,37 @@
+﻿@model List<focusApp.Models.TaskTag>
+@{
+    int taskId = (int)ViewBag.TaskId;
+}
+
+<h2>Görev Etiketleri</h2>
+
+<table>
+    <tr>
+        <th>Etiket Adı</th>
+        <th>İşlem</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>
+                <a href="/TaskTags/Delete?taskId=@item.TaskId&tagId=@item.TagId">Kaldır</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<hr />
+
+<h3>Yeni Etiket Ekle</h3>
+<form asp-action="Create" method="post">
+    <input type="hidden" name="taskId" value="@taskId" />
+    <label>Etiket:</label>
+    <select name="tagId">
+        @foreach (var tag in (List<focusApp.Models.Tag>)ViewBag.AllTags)
+        {
+            <option value="@tag.TagId">@tag.Name</option>
+        }
+    </select>
+    <button type="submit">Ekle</button>
+</form>

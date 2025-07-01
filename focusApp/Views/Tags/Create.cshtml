@@ -1,0 +1,8 @@
+﻿@model focusApp.Models.Tag
+<form asp-action="Create" method="post">
+    <label>Etiket Adı:</label>
+    <input asp-for="Name" /><br />
+    <label>Kullanıcı ID:</label>
+    <input asp-for="UserId" /><br />
+    <button type="submit">Ekle</button>
+</form>

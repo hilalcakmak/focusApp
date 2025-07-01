@@ -16,10 +16,14 @@
     <None Remove="Views\Users\" />
     <None Remove="Views\Projects\" />
     <None Remove="Views\Tasks\" />
+    <None Remove="Views\TaskTags\" />
+    <None Remove="Views\Tags\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Users\" />
     <Folder Include="Views\Projects\" />
     <Folder Include="Views\Tasks\" />
+    <Folder Include="Views\TaskTags\" />
+    <Folder Include="Views\Tags\" />
   </ItemGroup>
 </Project>

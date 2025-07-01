@@ -1,0 +1,20 @@
+﻿@model List<focusApp.Models.Tag>
+<table>
+    <tr>
+        <th>Etiket Adı</th>
+        <th>Kullanıcı ID</th>
+        <th>İşlem</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.UserId</td>
+            <td>
+                <a href="/Tags/Edit/@item.TagId">Düzenle</a>
+                <a href="/Tags/Delete/@item.TagId">Sil</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Tags/Create">Yeni Etiket</a>

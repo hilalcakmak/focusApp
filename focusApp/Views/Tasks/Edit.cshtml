@@ -1,0 +1,33 @@
+﻿@model focusApp.Models.FocusTask
+
+<h2>Görev Düzenle</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="TaskId" />
+
+    <label>Kullanıcı ID:</label>
+    <input asp-for="UserId" class="form-control" /><br />
+
+    <label>Proje ID:</label>
+    <input asp-for="ProjectId" class="form-control" /><br />
+
+    <label>Başlık:</label>
+    <input asp-for="Title" class="form-control" /><br />
+
+    <label>Açıklama:</label>
+    <textarea asp-for="Description" class="form-control"></textarea><br />
+
+    <label>Öncelik:</label>
+    <input asp-for="Priority" class="form-control" /><br />
+
+    <label>Tahmini Süre (dk):</label>
+    <input asp-for="EstimatedMins" class="form-control" /><br />
+
+    <label>Bitiş Tarihi:</label>
+    <input asp-for="DueDate" type="date" class="form-control" /><br />
+
+    <label>Tamamlandı mı?</label>
+    <input asp-for="IsCompleted" type="checkbox" class="form-check-input" /><br />
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
