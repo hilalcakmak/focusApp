@@ -1,9 +1,87 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dashboard";
 }
+@section Styles {
+    <style>
+        .dashboard-card {
+            min-height: 180px;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px #0001;
+            border: none;
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        .pomodoro-timer {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e63946;
+        }
+    </style>
+}
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card dashboard-card p-4 text-center">
+            <div class="pomodoro-timer" id="timer">25:00</div>
+            <div class="mt-2 mb-3 text-muted">Odaklanma Modu</div>
+            <button class="btn btn-danger px-4" onclick="startTimer()">Başlat</button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card dashboard-card p-4">
+            <div class="card-title fw-bold mb-2 text-primary">Bugünkü Görevler</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">Rapor yaz <span class="badge bg-success">✓</span></li>
+                <li class="list-group-item">Sunum hazırla</li>
+                <li class="list-group-item">Matematik ödevi</li>
+            </ul>
+            <a href="/Tasks" class="btn btn-link mt-2 px-0">Tüm görevler →</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card dashboard-card p-4">
+            <div class="card-title fw-bold mb-2 text-primary">Yaklaşan Hatırlatıcılar</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">15:00 - Su iç!</li>
+                <li class="list-group-item">17:45 - Ara ver</li>
+            </ul>
+            <a href="/Reminders" class="btn btn-link mt-2 px-0">Tüm hatırlatıcılar →</a>
+        </div>
+    </div>
 </div>
-
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card dashboard-card p-4">
+            <div class="card-title fw-bold mb-2 text-primary">Projeler</div>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-primary p-2 px-4">Yazılım</span>
+                <span class="badge rounded-pill bg-warning text-dark p-2 px-4">Dersler</span>
+                <span class="badge rounded-pill bg-info text-dark p-2 px-4">Spor</span>
+            </div>
+            <a href="/Projects" class="btn btn-link mt-2 px-0">Tüm projeler →</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card dashboard-card p-4">
+            <div class="card-title fw-bold mb-2 text-primary">Etiketler</div>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-success p-2 px-4">#iş</span>
+                <span class="badge bg-secondary p-2 px-4">#okul</span>
+                <span class="badge bg-danger p-2 px-4">#sağlık</span>
+            </div>
+            <a href="/Tags" class="btn btn-link mt-2 px-0">Tüm etiketler →</a>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>let sec = 1500, interval, isActive = false;
+        function startTimer() {
+            if (isActive) return;
+            isActive = true;
+            interval = setInterval(() => {
+                if (sec <= 0) { clearInterval(interval); isActive = false; return; }
+                sec--;
+                let m = Math.floor(sec / 60).toString().padStart(2, '0');
+                let s = (sec % 60).toString().padStart(2, '0');
+                document.getElementById('timer').innerText = m + ':' + s;
+            }, 1000);
+        }</script>
+}

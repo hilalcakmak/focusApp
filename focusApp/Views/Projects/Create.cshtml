@@ -1,10 +1,41 @@
-﻿@model Project
-<form asp-action="Create" method="post">
-    <label>Proje Adı:</label>
-    <input asp-for="Name" /><br />
-    <label>Renk (örn: #FF5733):</label>
-    <input asp-for="Color" /><br />
-    <label>Kullanıcı ID:</label>
-    <input asp-for="UserId" /><br />
-    <button type="submit">Ekle</button>
-</form>
+﻿@model focusApp.Models.Project
+@{
+    ViewData["Title"] = Model.ProjectId == 0 ? "Proje Ekle" : "Proje Düzenle";
+}
+@section Styles {
+    <style>
+        .form-card {
+            max-width: 420px;
+            margin: 0 auto;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px #0001;
+            border: none;
+            padding: 2rem;
+        }
+    </style>
+}
+<div class="card form-card">
+    <h2 class="mb-4">@ViewData["Title"]</h2>
+    <form asp-action="@(Model.ProjectId == 0 ? "Create" : "Edit")" method="post">
+        @if (Model.ProjectId != 0)
+        {<input type="hidden" asp-for="ProjectId" />}
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Proje Adı</label>
+            <input asp-for="Name" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Color" class="form-label">Renk (hex veya renk adı)</label>
+            <input asp-for="Color" class="form-control" type="color" style="width:70px;height:38px;padding:2px;" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="UserId" class="form-label">Kullanıcı</label>
+            <select asp-for="UserId" class="form-select" asp-items="ViewBag.Users">
+                <option value="">Seçiniz</option>
+            </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <a asp-action="Index" class="btn btn-outline-secondary ms-2">İptal</a>
+    </form>
+</div>

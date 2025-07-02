@@ -22,8 +22,9 @@ namespace focusApp.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            return View(new Reminder());
         }
+
 
         [HttpPost]
         public IActionResult Create(FocusTask task)

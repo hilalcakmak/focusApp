@@ -1,33 +1,59 @@
 ﻿@model focusApp.Models.FocusTask
-
-<h2>Görev Düzenle</h2>
-
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="TaskId" />
-
-    <label>Kullanıcı ID:</label>
-    <input asp-for="UserId" class="form-control" /><br />
-
-    <label>Proje ID:</label>
-    <input asp-for="ProjectId" class="form-control" /><br />
-
-    <label>Başlık:</label>
-    <input asp-for="Title" class="form-control" /><br />
-
-    <label>Açıklama:</label>
-    <textarea asp-for="Description" class="form-control"></textarea><br />
-
-    <label>Öncelik:</label>
-    <input asp-for="Priority" class="form-control" /><br />
-
-    <label>Tahmini Süre (dk):</label>
-    <input asp-for="EstimatedMins" class="form-control" /><br />
-
-    <label>Bitiş Tarihi:</label>
-    <input asp-for="DueDate" type="date" class="form-control" /><br />
-
-    <label>Tamamlandı mı?</label>
-    <input asp-for="IsCompleted" type="checkbox" class="form-check-input" /><br />
-
-    <button type="submit" class="btn btn-primary">Kaydet</button>
-</form>
+@{
+    ViewData["Title"] = "Görev Düzenle";
+}
+@section Styles {
+    <style>
+        .form-card {
+            max-width: 540px;
+            margin: 0 auto;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px #0001;
+            border: none;
+            padding: 2rem;
+        }
+    </style>
+}
+<div class="card form-card">
+    <h2 class="mb-4">Görev Düzenle</h2>
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="TaskId" />
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label">Başlık</label>
+            <input asp-for="Title" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Açıklama</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ProjectId" class="form-label">Proje</label>
+            <select asp-for="ProjectId" class="form-select">
+                <option value="">Seçiniz</option>
+                @* ViewBag.Projects ile doldurabilirsin *@
+            </select>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Priority" class="form-label">Öncelik</label>
+            <select asp-for="Priority" class="form-select">
+                <option value="1" >Yüksek</option>
+                <option value="2" >Orta</option>
+                <option value="3" >Düşük</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label asp-for="EstimatedMins" class="form-label">Tahmini Süre (dk)</label>
+            <input asp-for="EstimatedMins" type="number" min="1" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="DueDate" class="form-label">Son Tarih</label>
+            <input asp-for="DueDate" type="date" class="form-control" />
+        </div>
+        <div class="form-check mb-3">
+            <input asp-for="IsCompleted" class="form-check-input" type="checkbox" id="IsCompleted" />
+            <label class="form-check-label" for="IsCompleted">Tamamlandı</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <a asp-action="Index" class="btn btn-outline-secondary ms-2">İptal</a>
+    </form>
+</div>

@@ -1,20 +1,52 @@
-﻿@model List<Project>
-<table>
-    <tr>
-        <th>Proje Adı</th>
-        <th>Renk</th>
-        <th>İşlem</th>
-    </tr>
-    @foreach (var item in Model)
+﻿@model IEnumerable<focusApp.Models.Project>
+@{
+    ViewData["Title"] = "Projeler";
+}
+@section Styles {
+    <style>
+        .project-card {
+            border-radius: 16px;
+            box-shadow: 0 2px 14px #0001;
+            border: none;
+            min-height: 110px;
+            transition: box-shadow 0.2s;
+            border-left: 8px solid #a8dadc;
+        }
+
+            .project-card .card-title {
+                font-size: 1.15rem;
+                font-weight: bold;
+                color: #457b9d;
+            }
+
+        .project-badge {
+            font-size: .95rem;
+            padding: 4px 12px;
+            border-radius: 16px;
+            color: #fff;
+            margin-right: 8px;
+        }
+    </style>
+}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Projeler</h2>
+    <a href="/Projects/Create" class="btn btn-primary">+ Proje Ekle</a>
+</div>
+<div class="row g-4">
+    @foreach (var p in Model)
     {
-        <tr>
-            <td>@item.Name</td>
-            <td><span style="background:@item.Color">@item.Color</span></td>
-            <td>
-                <a href="/Projects/Edit/@item.ProjectId">Düzenle</a>
-                <a href="/Projects/Delete/@item.ProjectId">Sil</a>
-            </td>
-        </tr>
+        <div class="col-md-6 col-lg-4">
+            <div class="card project-card p-3" style="border-left-color:@(p.Color ?? "#a8dadc")">
+                <div class="card-title mb-2">@p.Name</div>
+                <div class="mb-2">
+                    <span class="project-badge" style="background:@(p.Color ?? "#457b9d")">@p.Name.Substring(0, 1).ToUpper()</span>
+                    <span class="text-muted" style="font-size:.9rem;">@p.CreatedAt.ToShortDateString()</span>
+                </div>
+                <div>
+                    <a href="/Projects/Edit/@p.ProjectId" class="btn btn-sm btn-outline-primary">Düzenle</a>
+                    <a href="/Projects/Delete/@p.ProjectId" class="btn btn-sm btn-outline-danger" onclick="return confirm('Silmek istediğine emin misin?')">Sil</a>
+                </div>
+            </div>
+        </div>
     }
-</table>
-<a href="/Projects/Create">Yeni Proje</a>
+</div>

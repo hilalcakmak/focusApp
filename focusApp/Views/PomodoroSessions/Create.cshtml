@@ -1,0 +1,14 @@
+﻿@model focusApp.Models.PomodoroSession
+
+<h2>Yeni Pomodoro Oturumu</h2>
+<form asp-action="Create" method="post">
+    <label>TaskId:</label>
+    <input asp-for="TaskId" /><br />
+    <label>Başlangıç:</label>
+    <input asp-for="StartedAt" type="datetime-local" /><br />
+    <label>Bitiş:</label>
+    <input asp-for="EndedAt" type="datetime-local" /><br />
+    <label>Break mi?</label>
+    <input asp-for="IsBreak" type="checkbox" /><br />
+    <button type="submit">Kaydet</button>
+</form>

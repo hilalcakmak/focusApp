@@ -1,0 +1,53 @@
+﻿@model IEnumerable<focusApp.Models.Reminder>
+@{
+    ViewData["Title"] = "Hatırlatıcılar";
+}
+@section Styles {
+    <style>
+        .reminder-card {
+            border-radius: 16px;
+            box-shadow: 0 2px 14px #0001;
+            border: none;
+            min-height: 90px;
+            transition: box-shadow 0.2s;
+        }
+
+            .reminder-card:hover {
+                box-shadow: 0 4px 30px #0002;
+            }
+
+        .reminder-date {
+            font-weight: bold;
+            color: #e63946;
+        }
+    </style>
+}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Hatırlatıcılar</h2>
+    <a href="/Reminders/Create" class="btn btn-primary">+ Hatırlatıcı Ekle</a>
+</div>
+<div class="row g-4">
+    @foreach (var r in Model)
+    {
+        <div class="col-md-6 col-lg-4">
+            <div class="card reminder-card p-3">
+                <div class="reminder-date mb-1">@r.RemindAt.ToString("dd MMMM yyyy HH:mm")</div>
+                <div class="mb-2">
+                    Görev ID: <b>@r.TaskId</b>
+                    @if (r.IsSent)
+                    {
+                        <span class="badge bg-success ms-2">Gönderildi</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning ms-2">Beklemede</span>
+                    }
+                </div>
+                <div>
+                    <a href="/Reminders/Edit/@r.ReminderId" class="btn btn-sm btn-outline-primary">Düzenle</a>
+                    <a href="/Reminders/Delete/@r.ReminderId" class="btn btn-sm btn-outline-danger" onclick="return confirm('Silmek istediğine emin misin?')">Sil</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

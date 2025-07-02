@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using focusApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 public class TagsController : Controller
 {
@@ -13,8 +14,12 @@ public class TagsController : Controller
     [HttpGet]
     public IActionResult Create()
     {
-        return View();
+        // User tablosundaki tüm kullanıcıları çek
+        var users = DP.Listeleme<User>("UserList").ToList();
+        ViewBag.Users = new SelectList(users, "UserId", "Username");
+        return View(new Tag());
     }
+
 
     [HttpPost]
     public IActionResult Create(Tag tag)
@@ -32,6 +37,8 @@ public class TagsController : Controller
     {
         var param = new DynamicParameters();
         param.Add("@TagId", id);
+        var users = DP.Listeleme<User>("UserList").ToList();
+        ViewBag.Users = new SelectList(users, "UserId", "Username");
         var tag = DP.Listeleme<Tag>("TagGetById", param).FirstOrDefault();
         return View(tag);
     }

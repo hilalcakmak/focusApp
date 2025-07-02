@@ -9,89 +9,113 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = focusApp
 build_property.RootNamespace = focusApp
-build_property.ProjectDir = /Users/a1-17/Desktop/focusApp/focusApp/
+build_property.ProjectDir = /Users/hilalcakmak/Desktop/focusApp/focusApp/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/a1-17/Desktop/focusApp/focusApp
+build_property.MSBuildProjectDirectory = /Users/hilalcakmak/Desktop/focusApp/focusApp
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Home/Index.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Home/Privacy.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Projects/Create.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/PomodoroSessions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9tb2Rvcm9TZXNzaW9ucy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/PomodoroSessions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9tb2Rvcm9TZXNzaW9ucy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/PomodoroSessions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9tb2Rvcm9TZXNzaW9ucy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Projects/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvamVjdHMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Projects/Edit.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Projects/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvamVjdHMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Projects/Index.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Projects/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvamVjdHMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Shared/Error.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Reminders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVtaW5kZXJzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Reminders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVtaW5kZXJzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Reminders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVtaW5kZXJzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Tags/Create.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Tags/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFncy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Tags/Edit.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Tags/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFncy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Tags/Index.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Tags/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFncy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Tasks/Create.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Tasks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFza3MvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Tasks/Edit.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Tasks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFza3MvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Tasks/Index.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Tasks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFza3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/TaskTags/Index.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/TaskTags/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFza1RhZ3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Users/Create.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Users/Edit.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Users/Index.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/_ViewImports.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/_ViewStart.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/a1-17/Desktop/focusApp/focusApp/Views/Shared/_Layout.cshtml]
+[/Users/hilalcakmak/Desktop/focusApp/focusApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-eqj33cup6l

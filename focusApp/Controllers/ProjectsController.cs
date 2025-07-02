@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Dapper;
 using focusApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -21,8 +22,11 @@ namespace focusApp.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            var users = DP.Listeleme<User>("UserList").ToList();
+            ViewBag.Users = new SelectList(users, "UserId", "Username");
+            return View(new Project());
         }
+
 
         [HttpPost]
         public IActionResult Create(Project project)
@@ -39,6 +43,8 @@ namespace focusApp.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
+            var users = DP.Listeleme<User>("UserList").ToList();
+            ViewBag.Users = new SelectList(users, "UserId", "Username");
             var param = new DynamicParameters();
             param.Add("@ProjectId", id);
             var project = DP.Listeleme<Project>("ProjectGetById", param).FirstOrDefault();

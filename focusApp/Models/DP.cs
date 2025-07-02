@@ -5,7 +5,7 @@ namespace focusApp.Models
 {
     public class DP
     {
-        public static string connectionString = "Server=localhost; Database=FocusDB; User Id=SA; Password=reallyStrongPwd123; TrustServerCertificate=True;";
+        public static string connectionString = "Server=localhost; Database=FocusDB; User Id=SA; Password=123; TrustServerCertificate=True;";
 
         public static void ExecuteReturn(string procadi, DynamicParameters param = null)
         {

@@ -1,20 +1,47 @@
-﻿@model List<focusApp.Models.Tag>
-<table>
-    <tr>
-        <th>Etiket Adı</th>
-        <th>Kullanıcı ID</th>
-        <th>İşlem</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Name</td>
-            <td>@item.UserId</td>
-            <td>
-                <a href="/Tags/Edit/@item.TagId">Düzenle</a>
-                <a href="/Tags/Delete/@item.TagId">Sil</a>
-            </td>
-        </tr>
-    }
-</table>
-<a href="/Tags/Create">Yeni Etiket</a>
+﻿@model IEnumerable<focusApp.Models.Tag>
+@{
+    ViewData["Title"] = "Etiketler";
+}
+@section Styles {
+    <style>
+        .tag-card {
+            border-radius: 14px;
+            box-shadow: 0 2px 14px #0001;
+            border: none;
+            padding: 1rem 1.3rem;
+            min-height: 64px;
+            font-size: 1.08rem;
+            background: #f1faee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .tag-badge {
+            background: #457b9d;
+            color: #fff;
+            border-radius: 22px;
+            padding: 6px 18px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-right: 16px;
+        }
+    </style>
+}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Etiketler</h2>
+    <a href="/Tags/Create" class="btn btn-primary">+ Etiket Ekle</a>
+</div>
+@foreach (var t in Model)
+{
+    <div class="tag-card">
+        <div>
+            <span class="tag-badge">#@t.Name</span>
+        </div>
+        <div>
+            <a href="/Tags/Edit/@t.TagId" class="btn btn-sm btn-outline-primary me-1">Düzenle</a>
+            <a href="/Tags/Delete/@t.TagId" class="btn btn-sm btn-outline-danger" onclick="return confirm('Silmek istediğine emin misin?')">Sil</a>
+        </div>
+    </div>
+}

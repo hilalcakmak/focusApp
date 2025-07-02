@@ -18,6 +18,8 @@
     <None Remove="Views\Tasks\" />
     <None Remove="Views\TaskTags\" />
     <None Remove="Views\Tags\" />
+    <None Remove="Views\PomodoroSessions\" />
+    <None Remove="Views\Reminders\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Users\" />
@@ -25,5 +27,7 @@
     <Folder Include="Views\Tasks\" />
     <Folder Include="Views\TaskTags\" />
     <Folder Include="Views\Tags\" />
+    <Folder Include="Views\PomodoroSessions\" />
+    <Folder Include="Views\Reminders\" />
   </ItemGroup>
 </Project>
